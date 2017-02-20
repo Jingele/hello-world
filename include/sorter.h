@@ -1,6 +1,14 @@
 #ifndef __SORTER_H__
 #define __SORTER_H__
 
+/*
+class sorting{
+pubic:
+	virtual void sort()=0;
+};
+*/
+
+
 class sorter{
 	private:
 		int *src;

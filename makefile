@@ -9,6 +9,7 @@ CFLAGS=-g -Wall -I $(DIR_INC)
 SRC=$(wildcard ${DIR_SRC}/*.cpp)
 OBJ=$(patsubst %.cpp,${DIR_OBJ}/%.o,$(notdir ${SRC}))
 
+
 TARGET=app
 
 ${TARGET}:${OBJ}
@@ -20,3 +21,5 @@ ${DIR_OBJ}/%.o:${DIR_SRC}/%.cpp
 .PHONY:clean
 clean:
 	rm ${DIR_OBJ}/*.o $(TARGET)
+
+
