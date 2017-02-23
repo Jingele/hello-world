@@ -5,16 +5,23 @@ class mat{
 	
 	private:
 		int row;
-		int column;
-		int *m;
+		int col;
+		int **p;
 	public:
 		mat();
 		mat(int i, int j);
-		mat(mat &t);
-
+		mat(const mat &m);
+		mat(int *d,int row,int col);
 		~mat();
 
-		display();
-
+		friend mat operator+(mat &a, mat &b);
+		mat operator+(int k);
+		friend mat operator*(mat &a, mat &b);
+		mat operator*(int k);
+		void display();
+	private:
+		static bool add_able(mat &a, mat &b);
+		static bool mul_able(mat &a, mat &b);
+};
 	
 #endif
