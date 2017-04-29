@@ -1,5 +1,6 @@
 #include "sorter.h"
 #include "linker.h"
+#include "mat.h"
 
 #include "common_io.h"
 
@@ -23,7 +24,7 @@ int main(void)
 
 int src[] = {1,5,2,4,3,8,7,6,9,0};
 int len  = 9;
-
+/*
 int main(void)
 {
 	cout<<"Original data:"<<endl;
@@ -38,4 +39,14 @@ int main(void)
 	lk.display();
 	return 0;
 }
-
+*/
+int col = 3;
+int row = 3;
+int main(void)
+{
+	mat m(src,col,row);
+	mat y = m;
+	mat x = (y*88888888);
+	x.display();
+	return 0;
+}
